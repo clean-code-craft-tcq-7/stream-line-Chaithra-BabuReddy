@@ -13,7 +13,7 @@ function getRandomIntValues(readingsCount, min, max) {
 
 /** 
 *returns stream of battery parameters{temp,soc} values.
-*@Param dataCount : no of readings required
+*@param dataCount : no of readings required
 */
 function processDataStream(dataCount) {
     var stream = [];

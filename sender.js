@@ -13,8 +13,8 @@ function getRandomIntValues(readingsCount, min, max) {
 
 /** 
 *returns stream of battery parameters{temp,soc} values.
-*@param dataCount : no of readings required
-*@returns array of json object{temp,soc}
+*@param {Number} dataCount : no of readings required
+*@returns {any} array of json object{temp,soc}
 */
 function processDataStream(dataCount) {
     var stream = [];

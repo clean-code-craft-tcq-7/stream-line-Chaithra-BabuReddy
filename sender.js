@@ -14,13 +14,14 @@ function getRandomIntValues(readingsCount, min, max) {
 /** 
 *returns stream of battery parameters{temp,soc} values.
 *@param dataCount : no of readings required
+*@returns array of json object{temp,soc}
 */
 function processDataStream(dataCount) {
     var stream = [];
-    var tempReadings = getRandomIntValues(dataCount, bmsParameters.temp.min, bmsParameters.temp.max);
+    var temReadings = getRandomIntValues(dataCount, bmsParameters.temp.min, bmsParameters.temp.max);
     var socReadings = getRandomIntValues(dataCount, bmsParameters.soc.min, bmsParameters.soc.max);
     for (let i = 0; i < dataCount; i++) {
-        stream.push({ temp: tempReadings[i], soc: socReadings[i] });
+        stream.push({ temp: temReadings[i], soc: socReadings[i] });
     }
     consoleLogger(stream);
     return stream;

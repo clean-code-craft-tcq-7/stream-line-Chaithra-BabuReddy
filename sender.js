@@ -17,10 +17,10 @@ function getRandomIntValues(readingsCount, min, max) {
 */
 function processDataStream(dataCount) {
     var stream = [];
-    var senderTempReadings = getRandomIntValues(dataCount, bmsParameters.temp.min, bmsParameters.temp.max);
-    var senderSocReadings = getRandomIntValues(dataCount, bmsParameters.soc.min, bmsParameters.soc.max);
+    var tempReadings = getRandomIntValues(dataCount, bmsParameters.temp.min, bmsParameters.temp.max);
+    var socReadings = getRandomIntValues(dataCount, bmsParameters.soc.min, bmsParameters.soc.max);
     for (let i = 0; i < dataCount; i++) {
-        stream.push({ temp: senderTempReadings[i], soc: senderSocReadings[i] });
+        stream.push({ temp: tempReadings[i], soc: socReadings[i] });
     }
     consoleLogger(stream);
     return stream;

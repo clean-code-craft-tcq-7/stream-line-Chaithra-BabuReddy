@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const { processDataStream } = require('../sender.js');
 
 describe('test processDataStream', () => {
-    if ('should exists', () => {
+    it('should exists', () => {
         expect(processDataStream).to.exist;
     });
     it('test returned stream has length equal to required count', () => {

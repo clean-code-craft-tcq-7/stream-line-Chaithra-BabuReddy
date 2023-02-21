@@ -14,7 +14,7 @@
     },
     "rules": {
         "linebreak-style": ["off"],
-        "require-jsdoc": ["off"],
+        "require-jsdoc": 1,
         "new-cap": ["off"],
         "max-len": [2, {"code": 100, "ignoreUrls": true}]
     }
